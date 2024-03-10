@@ -1,0 +1,67 @@
+What we need to do for the program:
+    - Two input files: A "product" file and a "supplier" file
+    - One output file, called the "inventory file"
+    
+    Supplier File:
+    -- Comma delimited, ", " separates aspects of an entry
+    -- 1 line per entry, "\n" indicates a new entry
+    -- (Supplier ID*), (Supplier Name), (supplier Address), (Phone number), (Supplier Email)
+    
+    Product File:
+    -- Comma delimited, ", " separates aspects of an entry
+    -- 1 line per entry, "\n" indicates a new entry
+    -- (Product ID*), (Product Name), (Description of Product), (Price), (Quantity), (Status), (Supplier ID*)
+    
+    Inventory File:
+    -- Comma delimited? Doesn't say it has to be but we already have the structure
+    -- One line per entry
+    -- I guess it can just be a .txt file, right?
+    -- (Product ID*), (Product Name), (Quantity), (Price), (Status), (Supplier Name)
+
+OUTLINE
+
+    -- intake file stream Supplier file
+    -- Struct idea
+    -- class hierarchy in which output file is inheriting from the objects defined in supplier and product classes
+    -- some form of encapsulation when merging the elements into one unique subset of data?
+    -- abstraction in the method used to provide only relevant data to the inventory class
+    
+    struct supplier
+    {
+        int sID;
+        string sName;
+        string sAddr;
+        string sPhone;
+        string sEmail;
+    }
+    
+    -- intake file stream Product file
+    -- Struct idea
+    
+    file.getline(temp, supplier[i].sName, etc, etc, etc, etc, \n)
+    supplier[i].sID = atoi(temp);
+    
+    struct product
+    {
+        int prodID;
+        string prodName;
+        string prodDesc;
+        string prodPrice; //price stays as a string due to currency symbol ($, ¥, €, etc)
+        int prodQuant;
+        char prodStatus; //no idea what A, B, and C for status mean so maybe make a new system for that
+        int sID;
+    }
+    
+
+Offensive Programming
+
+- Expectable errors
+-- Invalid user input
+-- Lack of memory on user's machine (if they're running this on a 386 I guess)
+-- Hardware failure
+-- Incorrect warehouse information
+
+- Preventable errors
+-- type mismatch or formatting errors during file reading and writing
+-- Unrecognized errors 
+-- Component miscommunication
