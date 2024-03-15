@@ -3,7 +3,7 @@
 using namespace std;
 
 struct Supplier {
-        int ID;
+        int sID;
         string Name;
         string Addr;
         string Phone;

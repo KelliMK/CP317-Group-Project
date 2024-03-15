@@ -37,7 +37,7 @@ int main() {
         }
 
         Supplier s; //initializing an object for one supplier to hold values obtained by vTemp
-        s.ID = std::stoi(vTemp[0]); //converting string ID into an integer
+        s.sID = std::stoi(vTemp[0]); //converting string ID into an integer
         s.Name = vTemp[1];
         s.Addr = vTemp[2];
         s.Phone = vTemp[3];
@@ -50,7 +50,7 @@ int main() {
     int size = Suppliers.size(); //making a separate integer for the size of the vector array
 
     for (int i = 0; i < size; i++) { //basic output loop for testing/debugging
-        cout << Suppliers[i].ID
+        cout << Suppliers[i].sID
         << Suppliers[i].Name
         << Suppliers[i].Addr
         << Suppliers[i].Phone
