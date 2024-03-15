@@ -1,0 +1,2 @@
+6789, Hitachi, 123 Hitachi city, 446-234-2314, support@hitachi.co.jp
+4567, Fujitsu, 345 Tokyo city, 03-3456-7890, support@fujitsu.co.jp
