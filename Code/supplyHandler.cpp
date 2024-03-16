@@ -10,9 +10,12 @@
 
 using namespace std;
 
-int main() {
+std::vector<Supplier> suppliers(string filename) {
 
+    /*
+    deprecated
     string filename = "testSupply.txt"; //change to commandline args eventually
+    */
 
     std::vector<Supplier> Suppliers; //init Suppliers vector
 
@@ -22,7 +25,7 @@ int main() {
 
     if (!infile) {
         cerr << "Invalid input file.\n";
-        return -1;
+        return Suppliers;
     }
 
     while (getline(infile, line)) { //first loop is reading the lines directly from the file
@@ -58,5 +61,5 @@ int main() {
     };
 
     infile.close(); //closing file
-    return 0;
+    return Suppliers;
 }

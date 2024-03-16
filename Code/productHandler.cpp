@@ -10,9 +10,12 @@
 
 using namespace std;
 
-int main() {
+std::vector<Product> products(string filename) {
 
+    /*
+    deprecated
     string filename = "testProduct.txt"; 
+    */
 
     std::vector<Product> Products; 
 
@@ -22,7 +25,7 @@ int main() {
 
     if (!infile) {
         cerr << "Invalid input file.\n";
-        return -1;
+        return Products;
     }
 
     while (getline(infile, line)) { 
@@ -62,5 +65,5 @@ int main() {
     };
 
     infile.close(); 
-    return 0;
+    return Products;
 }
