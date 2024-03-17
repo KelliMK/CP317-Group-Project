@@ -47,9 +47,9 @@ int main(int argc, char* argv[]) {
         safetyKey = 1;
     }
     if (safetyKey == 0) {
-        std::vector<Supplier> suppInput = suppliers(argv[0]);
-        std::vector<Product> prodInput = products(argv[1]);
-        outputter(suppInput, prodInput, argv[2]);
+        std::vector<Supplier> suppInput = suppliers(argv[1]);
+        std::vector<Product> prodInput = products(argv[2]);
+        outputter(suppInput, prodInput, argv[3]);
         return 0;
     } else {
         cout << "Please include three .txt files after program name, for example:\n\n";
@@ -63,7 +63,7 @@ void outputter(std::vector<Supplier> supplierVect, std::vector<Product> productV
     int prodVectLen = size(productVect); // get size of product vector
     int suppVectLen = size(supplierVect); // get size of supplier vector
     string theLine;     // String to print to file
-    string com = ", ";  // Comma delimiter for output
+    string com = ",";  // Comma delimiter for output
     string suppName;    // 
     for (int i = 0; i < prodVectLen; i++) {
         theLine = "";
@@ -80,9 +80,13 @@ void outputter(std::vector<Supplier> supplierVect, std::vector<Product> productV
                 suppName = "Not Found in supplier list";
             }
         }
-        theLine += to_string(currentProd.pID) + com + currentProd.Name + com + to_string(currentProd.Quantity) + com 
-        + currentProd.Price + com + currentProd.Status + com + suppName + "\n";
-        outputFile << theLine;
+
+        outputFile << currentProd.pID << com 
+        << currentProd.Name << com << " " 
+        << currentProd.Quantity << com 
+        << currentProd.Price << com 
+        << currentProd.Status << com 
+        << suppName << endl;
     }
     outputFile.close();
     return;
