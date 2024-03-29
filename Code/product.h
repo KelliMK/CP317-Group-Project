@@ -6,12 +6,12 @@
 
 using namespace std;
 
-struct Product
-    {
+class Product {
+    public:
         int pID;
         string Name;
         string Desc;
-        string Price; 
+        string Price;
         int Quantity;
         string Status; 
         int sID;

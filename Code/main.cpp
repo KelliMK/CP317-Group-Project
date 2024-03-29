@@ -23,7 +23,7 @@ using namespace std;
 namespace fs = std::filesystem;
 
 //prototype
-void outputter(std::vector<Supplier> supplierVect, std::vector<Product> productVect, string outputFileName);
+void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> productVect, string outputFileName);
 
 int main(int argc, char* argv[]) {
     int safetyKey = 0;
@@ -47,18 +47,18 @@ int main(int argc, char* argv[]) {
         safetyKey = 1;
     }
     if (safetyKey == 0) {
-        std::vector<Supplier> suppInput = suppliers(argv[1]);
+        std::vector<PublicSupplier> suppInput = suppliers(argv[1]);
         std::vector<Product> prodInput = products(argv[2]);
         outputter(suppInput, prodInput, argv[3]);
         return 0;
     } else {
         cout << "Please include three .txt files after program name, for example:\n\n";
         cout << "    ./InventoryGenerator suppliersFile.txt productsFile.txt outputInventoryFile.txt\n\n";
-        return 1;
+        exit(1);
     }
 }
 
-void outputter(std::vector<Supplier> supplierVect, std::vector<Product> productVect, string outputFileName) {
+void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> productVect, string outputFileName) {
     ofstream outputFile(outputFileName);
     int prodVectLen = size(productVect); // get size of product vector
     int suppVectLen = size(supplierVect); // get size of supplier vector
@@ -78,6 +78,8 @@ void outputter(std::vector<Supplier> supplierVect, std::vector<Product> productV
             }
             if (j == (suppVectLen - 1) && suppName == "") {
                 suppName = "Not Found in supplier list";
+                /*cerr << "Unknown supplier for product ID " + 
+                exit(1);*/
             }
         }
 
