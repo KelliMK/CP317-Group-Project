@@ -58,9 +58,9 @@ std::vector<Product> products(string filename) {
         cout << Products[i].pID
         << Products[i].Name
         << Products[i].Desc
-        << Products[i].Price << " " //this was needed to properly space the outputted elements
+        << Products[i].Price << " " // this was needed to properly space the outputted elements
         << Products[i].Quantity
-        << Products[i].Status  << " " //as was this
+        << Products[i].Status  << " " // as was this
         << Products[i].sID << endl;
     };
 

@@ -17,7 +17,8 @@ class Supplier{
                 string Email;
 };
 
-// And Here We Test Our Powers Of Inheritance (doesn't hit the song title as well)
+// And Here We Test Our Powers Of Inheritance 
+// (doesn't reflect the song title as well)
 class PublicSupplier: public Supplier {
         public:
                 string getAddr() { return Addr; }
@@ -28,6 +29,8 @@ class PublicSupplier: public Supplier {
                 void setEmail(string input) { Email = input; }
 }
 
-std::vector<Supplier> suppliers(string filename);
+// And Here We Test Our Powers Of Polymorphism
+std::vector<PublicSupplier> suppliers(string filename);
+std::vector<PublicSupplier> suppliers();
 
 #endif

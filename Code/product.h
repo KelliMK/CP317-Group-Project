@@ -18,5 +18,6 @@ class Product {
     };
 
 std::vector<Product> products(string filename);
+std::vector<Product> products();
 
 #endif

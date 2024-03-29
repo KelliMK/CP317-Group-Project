@@ -53,7 +53,7 @@ int main(int argc, char* argv[]) {
         return 0;
     } else {
         cout << "Please include three .txt files after program name, for example:\n\n";
-        cout << "    ./InventoryGenerator suppliersFile.txt productsFile.txt outputInventoryFile.txt\n\n";
+        cout << "    ./CinventoryGenerator suppliersFile.txt productsFile.txt outputInventoryFile.txt\n\n";
         exit(1);
     }
 }
@@ -64,22 +64,22 @@ void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> pr
     int suppVectLen = size(supplierVect); // get size of supplier vector
     string theLine;     // String to print to file
     string com = ",";  // Comma delimiter for output
-    string suppName;    // 
+    string suppName;    // supplier name
     for (int i = 0; i < prodVectLen; i++) {
         theLine = "";
         suppName = "";
         Product currentProd = productVect.at(i);
         int matcher = currentProd.sID;
-        for (int j = 0; j < suppVectLen; j++) {
+        for (int j = 0; j <= suppVectLen; j++) {
             Supplier suppClone = supplierVect.at(j);
             if (matcher == suppClone.sID) {
                 suppName = suppClone.Name;
                 j = suppVectLen;
             }
-            if (j == (suppVectLen - 1) && suppName == "") {
+            if (j == (suppVectLen) && suppName == "") {
                 suppName = "Not Found in supplier list";
-                /*cerr << "Unknown supplier for product ID " + 
-                exit(1);*/
+                cerr << "Unknown supplier for product ID " + itoa(currentProd.pID);
+                exit(1);
             }
         }
 
