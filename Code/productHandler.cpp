@@ -54,6 +54,8 @@ std::vector<Product> products(string filename) {
 
     int size = Products.size(); 
 
+    /*
+    deprecated test
     for (int i = 0; i < size; i++) { 
         cout << Products[i].pID
         << Products[i].Name
@@ -63,6 +65,7 @@ std::vector<Product> products(string filename) {
         << Products[i].Status  << " " // as was this
         << Products[i].sID << endl;
     };
+    */
 
     infile.close(); 
     return Products;

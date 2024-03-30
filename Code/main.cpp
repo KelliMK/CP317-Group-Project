@@ -65,7 +65,7 @@ void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> pr
     string theLine;     // String to print to file
     string com = ",";  // Comma delimiter for output
     string suppName;    // supplier name
-    for (int i = 0; i < (prodVectLen - 1); i++) {
+    for (int i = 0; i < (prodVectLen); i++) {
         theLine = "";
         suppName = "";
         Product currentProd = productVect.at(i);
@@ -79,7 +79,7 @@ void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> pr
             if (j == (suppVectLen - 1) && suppName == "") {
                 suppName = "Not Found in supplier list";
                 cerr << "Unknown supplier for product ID " + std::to_string(currentProd.pID) + "\n";
-                exit(1);
+                exit(EXIT_FAILURE);
             }
         }
 
