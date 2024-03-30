@@ -24,9 +24,9 @@ class PublicSupplier: public Supplier {
                 string getAddr() { return Addr; }
                 string getPhone() { return Phone; }
                 string getEmail() { return Email; }
-                void setAddr(string input) { Addr = input; }
-                void setPhone(string input) { Phone = input; }
-                void setEmail(string input) { Email = input; }
+                void setAddr(string inputA) { Addr = input; }
+                void setPhone(string inputP) { Phone = input; }
+                void setEmail(string inputE) { Email = input; }
 }
 
 // And Here We Test Our Powers Of Polymorphism
