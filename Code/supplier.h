@@ -17,20 +17,19 @@ class Supplier{
                 string Email;
 };
 
-// And Here We Test Our Powers Of Inheritance 
-// (doesn't reflect the song title as well)
+// And Here We Test Our Powers Of Inheritance S
 class PublicSupplier: public Supplier {
         public:
                 string getAddr() { return Addr; }
                 string getPhone() { return Phone; }
                 string getEmail() { return Email; }
-                void setAddr(string inputA) { Addr = input; }
-                void setPhone(string inputP) { Phone = input; }
-                void setEmail(string inputE) { Email = input; }
-}
+                void setAddr(string inputA) { Addr = inputA; }
+                void setPhone(string inputP) { Phone = inputP; }
+                void setEmail(string inputE) { Email = inputE; }
+};
 
 // And Here We Test Our Powers Of Polymorphism
-std::vector<PublicSupplier> suppliers(string filename);
 std::vector<PublicSupplier> suppliers();
+std::vector<PublicSupplier> suppliers(string filename);
 
 #endif

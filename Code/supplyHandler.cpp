@@ -25,7 +25,7 @@ std::vector<PublicSupplier> suppliers(string filename) {
 
     if (!infile) {
         cerr << "Invalid input file.\n";
-        exit(1);;
+        exit(1);
     }
 
     while (getline(infile, line)) { //first loop is reading the lines directly from the file
@@ -52,9 +52,8 @@ std::vector<PublicSupplier> suppliers(string filename) {
 
     int size = Suppliers.size(); //making a separate integer for the size of the vector array
 
-    // basic output loop for testing/debugging
     /*
-    for (int i = 0; i < size; i++) { 
+    for (int i = 0; i < size; i++) { // basic output loop for testing/debugging
         cout << Suppliers[i].sID
         << Suppliers[i].Name
         << Suppliers[i].getAddr()

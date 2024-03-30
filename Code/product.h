@@ -17,7 +17,7 @@ class Product {
         int sID;
     };
 
-std::vector<Product> products(string filename);
 std::vector<Product> products();
+std::vector<Product> products(string filename);
 
 #endif

@@ -25,7 +25,7 @@ std::vector<Product> products(string filename) {
 
     if (!infile) {
         cerr << "Invalid input file.\n";
-        return Products;
+        exit(1);
     }
 
     while (getline(infile, line)) { 

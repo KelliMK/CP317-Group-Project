@@ -32,15 +32,15 @@ int main(int argc, char* argv[]) {
         fs::path prodFilePath = argv[2];
         fs::path outFilePath = argv[3];
         if (suppFilePath.extension() != ".txt") {
-            cout << "Your second argument needs to end in .txt for safe reading.\n";
+            cerr << "Your second argument needs to end in .txt for safe reading.\n";
             safetyKey++;
         }
         if (prodFilePath.extension() != ".txt") {
-            cout << "Your third argument needs to end in .txt for safe reading.\n";
+            cerr << "Your third argument needs to end in .txt for safe reading.\n";
             safetyKey++;
         }
         if (outFilePath.extension() != ".txt") {
-            cout << "Your fourth argument needs to end in .txt for safe reading.\n";
+            cerr << "Your fourth argument needs to end in .txt for safe reading.\n";
             safetyKey++;
         }
     } else {
@@ -52,8 +52,8 @@ int main(int argc, char* argv[]) {
         outputter(suppInput, prodInput, argv[3]);
         return 0;
     } else {
-        cout << "Please include three .txt files after program name, for example:\n\n";
-        cout << "    ./CinventoryGenerator suppliersFile.txt productsFile.txt outputInventoryFile.txt\n\n";
+        cerr << "Please include three .txt files after program name, for example:\n\n";
+        cerr << "    ./CinventoryGenerator suppliersFile.txt productsFile.txt outputInventoryFile.txt\n\n";
         exit(1);
     }
 }
@@ -65,7 +65,7 @@ void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> pr
     string theLine;     // String to print to file
     string com = ",";  // Comma delimiter for output
     string suppName;    // supplier name
-    for (int i = 0; i < prodVectLen; i++) {
+    for (int i = 0; i < (prodVectLen - 1); i++) {
         theLine = "";
         suppName = "";
         Product currentProd = productVect.at(i);
@@ -76,9 +76,9 @@ void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> pr
                 suppName = suppClone.Name;
                 j = suppVectLen;
             }
-            if (j == (suppVectLen) && suppName == "") {
+            if (j == (suppVectLen - 1) && suppName == "") {
                 suppName = "Not Found in supplier list";
-                cerr << "Unknown supplier for product ID " + itoa(currentProd.pID);
+                cerr << "Unknown supplier for product ID " + std::to_string(currentProd.pID) + "\n";
                 exit(1);
             }
         }
