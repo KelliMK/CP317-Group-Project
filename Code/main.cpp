@@ -74,23 +74,27 @@ void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> pr
     string suppName;    // supplier name
 
 
+    /*
     for (int i = 0; i < suppVectLen; i++) {     // Duplicate sIDs check
         for (int j = (i + 1); j < suppVectLen; j++) {
             if (supplierVect[i].sID == supplierVect[j].sID) {
-                cerr << "Multiple suppliers with ID " + std::to_string(supplierVect[i].sID) + "\n";
+                cerr << "Multiple supplier entries with ID " + std::to_string(supplierVect[i].sID) + "\n";
                 exit(EXIT_FAILURE);
             }
         }
     }
+    */
 
-    for (int i = 0; i < prodVectLen; i++) {     // Duplicate sIDs check
+    /*
+    for (int i = 0; i < prodVectLen; i++) {     // Duplicate pIDs check
         for (int j = (i + 1); j < prodVectLen; j++) {
             if (productVect[i].pID == productVect[j].pID) {
-                cerr << "Multiple suppliers with ID " + std::to_string(productVect[i].pID) + "\n";
+                cerr << "Multiple product entries with ID " + std::to_string(productVect[i].pID) + "\n";
                 exit(EXIT_FAILURE);
             }
         }
     }
+    */
 
     for (int i = 0; i < (prodVectLen); i++) {   // matches sIDs for inserting supplier names
         suppName = "";
