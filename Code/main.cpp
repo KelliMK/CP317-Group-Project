@@ -73,8 +73,6 @@ void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> pr
     string com = ",";  // Comma delimiter for output
     string suppName;    // supplier name
 
-
-    /*
     for (int i = 0; i < suppVectLen; i++) {     // Duplicate sIDs check
         for (int j = (i + 1); j < suppVectLen; j++) {
             if (supplierVect[i].sID == supplierVect[j].sID) {
@@ -83,9 +81,7 @@ void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> pr
             }
         }
     }
-    */
 
-    /*
     for (int i = 0; i < prodVectLen; i++) {     // Duplicate pIDs check
         for (int j = (i + 1); j < prodVectLen; j++) {
             if (productVect[i].pID == productVect[j].pID) {
@@ -94,7 +90,6 @@ void outputter(std::vector<PublicSupplier> supplierVect, std::vector<Product> pr
             }
         }
     }
-    */
 
     for (int i = 0; i < (prodVectLen); i++) {   // matches sIDs for inserting supplier names
         suppName = "";
