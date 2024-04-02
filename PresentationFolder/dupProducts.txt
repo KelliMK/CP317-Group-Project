@@ -1,0 +1,4 @@
+4234, TV, Plate TV, $380.5, 20, A, 6789
+2234, Telephone, Home telephone, $50.6, 40, B, 4567
+2235, USB Cable, 3m USB 3.0 Cable, $8.0, 100, C, 4567
+2235, USB Cable, 3m USB 3.0 Cable, $8.0, 100, C, 4567

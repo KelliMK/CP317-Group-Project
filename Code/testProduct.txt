@@ -1,3 +1,2 @@
 4234, TV, Plate TV, $380.5, 20, A, 6789
 2234, Telephone, Home telephone, $50.6, 40, B, 4567
-1234, Camera, Camera, $70.6, 60, C, 6666
