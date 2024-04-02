@@ -1,0 +1,5 @@
+1234, TV, Plate TV, $699.7, 5, B, 7084
+1516, Mouse, Wireless Mouse, $69.9, 25, C, 2345
+2591, Camera, Digital Camera, $499.9, 10, B, 9512
+3034, Telephone, Home telephone, $99.9, 25, A, 8765
+3374, Laptop, Laptop, $1369.9, 15, A, 4567
