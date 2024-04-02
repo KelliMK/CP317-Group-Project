@@ -14,7 +14,7 @@ std::vector<Product> products() {
 	std::vector<Product> testProds;
 	Product p1, p2, p3;
 	
-	p1.pID = "1000";
+	p1.pID = 1000;
 	p1.Name = "Product 1";
 	p1.Desc = "First Testing Product";
 	p1.Price = "$100.00";
@@ -23,7 +23,7 @@ std::vector<Product> products() {
 	p1.sID = 1111;
 	testProds.push_back(p1);
 
-	p2.pID = "2000";
+	p2.pID = 2000;
 	p2.Name = "Product 2";
 	p2.Desc = "Second Testing Product";
 	p2.Price = "$200.00";
@@ -32,7 +32,7 @@ std::vector<Product> products() {
 	p2.sID = 2222;
 	testProds.push_back(p2);
 
-	p3.pID = "3000";
+	p3.pID = 3000;
 	p3.Name = "Product 3";
 	p3.Desc = "Third Testing Product";
 	p3.Price = "$300.00";

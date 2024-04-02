@@ -12,7 +12,7 @@ using namespace std;
 
 std::vector<PublicSupplier> suppliers() {
 	std::vector<PublicSupplier> s;
-	PublicSupplier s1, s2, s3;
+	PublicSupplier s1, s2, s3, s4, s5;
 
 	s1.sID = 1111;
 	s1.Name = "Supplier 1";
